@@ -1,19 +1,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cludyw on cludyw</title>
-    <link>freeday/</link>
+    <link>/freeday/</link>
     <description>Recent content in cludyw on cludyw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="freeday/" rel="self" type="application/rss+xml" />
+    <atom:link href="/freeday/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Posts</title>
-      <link>freeday/posts/</link>
+      <link>/freeday/posts/</link>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>freeday/posts/</guid>
+      <guid>/freeday/posts/</guid>
       <description></description>
     </item>
     
