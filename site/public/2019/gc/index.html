@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="cludyw">
+  
+  
+  
+  
+  
+  <link rel="canonical" href="https://example.com/2019/gc/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           JAVA GC 调优常用命令 | cludyw
+       
+  </title>
+  <meta name="title" content="JAVA GC 调优常用命令 | cludyw">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/example.com"
+    },
+    "articleSection" : "posts",
+    "name" : "JAVA GC 调优常用命令",
+    "headline" : "JAVA GC 调优常用命令",
+    "description" : "打印线程信息 ps -mp pid -o THREAD,tid,time  -m 代表打印线程信息 -o 输出格式\n格式：args, cmd, comm, command, fname, ucmd, ucomm, lstart, bsdstart, start\n打印所有进程 ps –ef 或 ps aux  推荐ps -ef 因为aux会截断显示command\n打印线程堆栈信息 10进制转16进制\nprintf \x26quot;%x\\n\x26quot; tid  jstack pid | grep tid -A 30  tid为16进制\n-A 代表行数\n解决jmap:Operation not permitted echo 0 \x26gt; \/proc\/sys\/kernel\/yama\/ptrace_scope  永久更改：\nvi \/etc\/sysctl.d\/10-ptrace.conf kernel.yama.ptrace_scope = 0  GC日志参数  XX:\x2bPrintGC：输出GC日志 XX:\x2bPrintGCDetails：输出GC的详细日志 XX:\x2bPrintGCTimeStamps：输出GC的时间戳（以基准时间的形式） XX:\x2bPrintGCDateStamps：输出GC的时间戳（以日期的形式，如2018-08-29T19:22:48.741-0800） XX:\x2bPrintHeapAtGC：在进行GC的前后打印出堆的信息 Xloggc:gc.",
+    "inLanguage" : "en-us",
+    "author" : "cludyw",
+    "creator" : "cludyw",
+    "publisher": "cludyw",
+    "accountablePerson" : "cludyw",
+    "copyrightHolder" : "cludyw",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-11-20 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2019-11-20 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/example.com\/2019\/gc\/",
+    "wordCount" : "78",
+    "keywords" : [ "java","gc", "cludyw"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://example.com">cludyw</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">博客</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://example.com">cludyw</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">博客</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">JAVA GC 调优常用命令</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://example.com" rel="author">cludyw</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-11-20 itemprop="datePublished">November 20, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://example.com/categories/java/"> java </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h3 id="打印线程信息">打印线程信息</h3>
+
+<pre><code class="language-sbtshell">ps -mp pid -o THREAD,tid,time 
+</code></pre>
+
+<p>-m 代表打印线程信息
+-o 输出格式</p>
+
+<p>格式：args, cmd, comm, command, fname, ucmd, ucomm, lstart, bsdstart, start</p>
+
+<h3 id="打印所有进程">打印所有进程</h3>
+
+<pre><code class="language-sbtshell">ps –ef 或 ps aux 
+</code></pre>
+
+<p>推荐ps -ef 因为aux会截断显示command</p>
+
+<h3 id="打印线程堆栈信息">打印线程堆栈信息</h3>
+
+<p>10进制转16进制</p>
+
+<pre><code class="language-sbtshell">printf &quot;%x\n&quot; tid
+</code></pre>
+
+<pre><code class="language-sbtshell">jstack pid | grep tid -A 30
+</code></pre>
+
+<p>tid为16进制</p>
+
+<p>-A 代表行数</p>
+
+<h3 id="解决jmap-operation-not-permitted">解决jmap:Operation not permitted</h3>
+
+<pre><code class="language-sbtshell">echo 0 &gt; /proc/sys/kernel/yama/ptrace_scope
+</code></pre>
+
+<p>永久更改：</p>
+
+<pre><code class="language-sbtshell">vi  /etc/sysctl.d/10-ptrace.conf 
+
+kernel.yama.ptrace_scope = 0 
+</code></pre>
+
+<h3 id="gc日志参数">GC日志参数</h3>
+
+<ul>
+<li>XX:+PrintGC：输出GC日志</li>
+<li>XX:+PrintGCDetails：输出GC的详细日志</li>
+<li>XX:+PrintGCTimeStamps：输出GC的时间戳（以基准时间的形式）</li>
+<li>XX:+PrintGCDateStamps：输出GC的时间戳（以日期的形式，如2018-08-29T19:22:48.741-0800）</li>
+<li>XX:+PrintHeapAtGC：在进行GC的前后打印出堆的信息</li>
+
+<li><p>Xloggc:gc.log：日志文件的输出路径</p></li>
+
+<li><p>XX:+HeapDumpOnOutOfMemoryError：发生内存溢出时生成heapdump文件</p></li>
+
+<li><p>XX:HeapDumpPath：指定heapdump文件</p></li>
+</ul>
+
+<h3 id="查看jvm-堆的情况">查看jvm 堆的情况</h3>
+
+<pre><code class="language-sbtshell">jstat -gc pid 1000
+</code></pre>
+
+<p>1000代表每隔1000毫秒打印一次</p>
+
+<h3 id="dump-jvm堆的信息">dump jvm堆的信息</h3>
+
+<pre><code class="language-sbtshell">jmap -dump:live,format=b,file=dump.hprof pid
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>cludyw </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://example.com/2019/gc/>https://example.com/2019/gc/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://example.com/tags/java/">
+                    #java</a></span>
+            
+            <span class="tag"><a href="https://example.com/tags/gc/">
+                    #gc</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://example.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            
+            <span class="author" itemprop="copyrightHolder"><a href="https://example.com">cludyw</a></span>
+         
+
+         
+		  
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

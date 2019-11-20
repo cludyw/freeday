@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on cludyw</title>
+    <link>https://example.com/tags/java/</link>
+    <description>Recent content in java on cludyw</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JAVA GC 调优常用命令</title>
+      <link>https://example.com/2019/gc/</link>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2019/gc/</guid>
+      <description>打印线程信息 ps -mp pid -o THREAD,tid,time  -m 代表打印线程信息 -o 输出格式
+格式：args, cmd, comm, command, fname, ucmd, ucomm, lstart, bsdstart, start
+打印所有进程 ps –ef 或 ps aux  推荐ps -ef 因为aux会截断显示command
+打印线程堆栈信息 10进制转16进制
+printf &amp;quot;%x\n&amp;quot; tid  jstack pid | grep tid -A 30  tid为16进制
+-A 代表行数
+解决jmap:Operation not permitted echo 0 &amp;gt; /proc/sys/kernel/yama/ptrace_scope  永久更改：
+vi /etc/sysctl.d/10-ptrace.conf kernel.yama.ptrace_scope = 0  GC日志参数  XX:+PrintGC：输出GC日志 XX:+PrintGCDetails：输出GC的详细日志 XX:+PrintGCTimeStamps：输出GC的时间戳（以基准时间的形式） XX:+PrintGCDateStamps：输出GC的时间戳（以日期的形式，如2018-08-29T19:22:48.741-0800） XX:+PrintHeapAtGC：在进行GC的前后打印出堆的信息 Xloggc:gc.</description>
+    </item>
+    
+  </channel>
+</rss>
