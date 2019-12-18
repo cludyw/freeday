@@ -6,10 +6,28 @@
     <description>Recent content in Tags on cludyw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 15:57:07 +0800</lastBuildDate>
     
 	<atom:link href="/freeday/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>dealock</title>
+      <link>/freeday/tags/dealock/</link>
+      <pubDate>Wed, 18 Dec 2019 15:57:07 +0800</pubDate>
+      
+      <guid>/freeday/tags/dealock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>/freeday/tags/mysql/</link>
+      <pubDate>Wed, 18 Dec 2019 15:57:07 +0800</pubDate>
+      
+      <guid>/freeday/tags/mysql/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>gc</title>

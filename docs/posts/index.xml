@@ -6,10 +6,20 @@
     <description>Recent content in Posts on cludyw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 15:57:07 +0800</lastBuildDate>
     
 	<atom:link href="/freeday/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mysql 死锁排查常用命令</title>
+      <link>/freeday/2019/dealock/</link>
+      <pubDate>Wed, 18 Dec 2019 15:57:07 +0800</pubDate>
+      
+      <guid>/freeday/2019/dealock/</guid>
+      <description> 查看最后一次死锁信息 show engine innodb status;  通过查看错误日志排查 查看是否开启错误日志 show variables like &#39;innodb_print_all_deadlocks&#39;;  查看日志路径 show variables like &#39;log_error&#39;  如果为stderr则输入到console, 可在启动时指定&amp;ndash;log-error或配置/etc/mysql/my.cnf中log_error参数指定错误日志路径
+查看表锁 show OPEN TABLES where In_use &amp;gt; 0;  查看事务列表 SELECT * FROM INFORMATION_SCHEMA.INNODB_TRX;  查看线程sql执行历史 SELECT * FROM performance_schema.events_statements_history WHERE thread_id = (SELECT THREAD_ID FROM performance_schema.threads WHERE PROCESSLIST_ID = 11062)  查看线程列表 SHOW PROCESSLIST;  mysql8.0.1版本后可以performance_schema.data_locks查看锁 SELECT * from performance_schema.data_locks;  </description>
+    </item>
     
     <item>
       <title>JAVA GC 调优常用命令</title>
