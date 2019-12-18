@@ -1,10 +1,12 @@
 ---
-author = "cludyw"
-title: "{{ replace .Name "-" " " | title }}"
+author: cludyw
+title: {{ replace .Name "-" " " | title }}
 date: {{ .Date }}
 draft: true
-description = ""
-tags = []
-categories = []
+description: ""
+tags:
+    - tg
+categories:
+    - ca
 ---
 
