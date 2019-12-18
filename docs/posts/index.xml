@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on cludyw</title>
-    <link>/posts/</link>
+    <link>/freeday/posts/</link>
     <description>Recent content in Posts on cludyw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Dec 2019 15:57:07 +0800</lastBuildDate>
     
-	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/freeday/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mysql 死锁排查常用命令</title>
-      <link>/2019/dealock/</link>
+      <link>/freeday/2019/dealock/</link>
       <pubDate>Wed, 18 Dec 2019 15:57:07 +0800</pubDate>
       
-      <guid>/2019/dealock/</guid>
+      <guid>/freeday/2019/dealock/</guid>
       <description>查看最后一次死锁信息 show engine innodb status;  通过查看错误日志排查 查看是否开启错误日志 show variables like &#39;innodb_print_all_deadlocks&#39;;  查看日志路径 show variables like &#39;log_error&#39;  如果为stderr则输入到console, 可在启动时指定&amp;ndash;log-error或配置/etc/mysql/my.cnf中log_error参数指定错误日志路径
 查看表锁 show OPEN TABLES where In_use &amp;gt; 0;  例如:
  Database: business_service Table: app In_use: 1 Name_locked: 0  查看事务列表 SELECT * FROM INFORMATION_SCHEMA.INNODB_TRX;  例如:
@@ -25,10 +25,10 @@
     
     <item>
       <title>JAVA GC 调优常用命令</title>
-      <link>/2019/gc/</link>
+      <link>/freeday/2019/gc/</link>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/gc/</guid>
+      <guid>/freeday/2019/gc/</guid>
       <description>打印线程信息 ps -mp pid -o THREAD,tid,time  -m 代表打印线程信息 -o 输出格式
 格式：args, cmd, comm, command, fname, ucmd, ucomm, lstart, bsdstart, start
 打印所有进程 ps –ef 或 ps aux  推荐ps -ef 因为aux会截断显示command

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gc on cludyw</title>
-    <link>/tags/gc/</link>
+    <link>/freeday/tags/gc/</link>
     <description>Recent content in gc on cludyw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/gc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/freeday/tags/gc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JAVA GC 调优常用命令</title>
-      <link>/2019/gc/</link>
+      <link>/freeday/2019/gc/</link>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/gc/</guid>
+      <guid>/freeday/2019/gc/</guid>
       <description>打印线程信息 ps -mp pid -o THREAD,tid,time  -m 代表打印线程信息 -o 输出格式
 格式：args, cmd, comm, command, fname, ucmd, ucomm, lstart, bsdstart, start
 打印所有进程 ps –ef 或 ps aux  推荐ps -ef 因为aux会截断显示command

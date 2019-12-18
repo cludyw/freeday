@@ -2,7 +2,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>/categories/</loc>
+      <loc>/freeday/categories/</loc>
       
       <lastmod>2019-12-18T15:57:07+08:00</lastmod>
       
@@ -12,7 +12,7 @@
     </url>
   
     <url>
-      <loc>/</loc>
+      <loc>/freeday/</loc>
       
       <lastmod>2019-12-18T15:57:07+08:00</lastmod>
       
@@ -22,7 +22,7 @@
     </url>
   
     <url>
-      <loc>/tags/dealock/</loc>
+      <loc>/freeday/tags/dealock/</loc>
       
       <lastmod>2019-12-18T15:57:07+08:00</lastmod>
       
@@ -32,7 +32,7 @@
     </url>
   
     <url>
-      <loc>/tags/mysql/</loc>
+      <loc>/freeday/tags/mysql/</loc>
       
       <lastmod>2019-12-18T15:57:07+08:00</lastmod>
       
@@ -42,7 +42,7 @@
     </url>
   
     <url>
-      <loc>/categories/mysql/</loc>
+      <loc>/freeday/categories/mysql/</loc>
       
       <lastmod>2019-12-18T15:57:07+08:00</lastmod>
       
@@ -52,7 +52,7 @@
     </url>
   
     <url>
-      <loc>/2019/dealock/</loc>
+      <loc>/freeday/2019/dealock/</loc>
       
       <lastmod>2019-12-18T15:57:07+08:00</lastmod>
       
@@ -62,7 +62,7 @@
     </url>
   
     <url>
-      <loc>/posts/</loc>
+      <loc>/freeday/posts/</loc>
       
       <lastmod>2019-12-18T15:57:07+08:00</lastmod>
       
@@ -72,7 +72,7 @@
     </url>
   
     <url>
-      <loc>/tags/</loc>
+      <loc>/freeday/tags/</loc>
       
       <lastmod>2019-12-18T15:57:07+08:00</lastmod>
       
@@ -82,7 +82,7 @@
     </url>
   
     <url>
-      <loc>/tags/gc/</loc>
+      <loc>/freeday/tags/gc/</loc>
       
       <lastmod>2019-11-20T00:00:00+00:00</lastmod>
       
@@ -92,7 +92,7 @@
     </url>
   
     <url>
-      <loc>/tags/java/</loc>
+      <loc>/freeday/tags/java/</loc>
       
       <lastmod>2019-11-20T00:00:00+00:00</lastmod>
       
@@ -102,7 +102,7 @@
     </url>
   
     <url>
-      <loc>/categories/java/</loc>
+      <loc>/freeday/categories/java/</loc>
       
       <lastmod>2019-11-20T00:00:00+00:00</lastmod>
       
@@ -112,7 +112,7 @@
     </url>
   
     <url>
-      <loc>/2019/gc/</loc>
+      <loc>/freeday/2019/gc/</loc>
       
       <lastmod>2019-11-20T00:00:00+00:00</lastmod>
       
