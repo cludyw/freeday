@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on cludyw</title>
-    <link>/freeday/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on cludyw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Dec 2019 15:57:07 +0800</lastBuildDate>
     
-	<atom:link href="/freeday/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>dealock</title>
-      <link>/freeday/tags/dealock/</link>
+      <link>/tags/dealock/</link>
       <pubDate>Wed, 18 Dec 2019 15:57:07 +0800</pubDate>
       
-      <guid>/freeday/tags/dealock/</guid>
+      <guid>/tags/dealock/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mysql</title>
-      <link>/freeday/tags/mysql/</link>
+      <link>/tags/mysql/</link>
       <pubDate>Wed, 18 Dec 2019 15:57:07 +0800</pubDate>
       
-      <guid>/freeday/tags/mysql/</guid>
+      <guid>/tags/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gc</title>
-      <link>/freeday/tags/gc/</link>
+      <link>/tags/gc/</link>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/freeday/tags/gc/</guid>
+      <guid>/tags/gc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>/freeday/tags/java/</link>
+      <link>/tags/java/</link>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/freeday/tags/java/</guid>
+      <guid>/tags/java/</guid>
       <description></description>
     </item>
     
